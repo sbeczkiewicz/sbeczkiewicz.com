@@ -1,0 +1,25 @@
+---
+import type { Link } from "@composables/Link";
+interface Props {
+  links: Link[];
+}
+const { links } = Astro.props;
+---
+
+<div class="flex items-center">
+  <div class="flex-grow">
+    <a href="/">
+      <img src="/assets/face/face.svg" alt="My face" class="h-11" />
+    </a>
+  </div>
+  <div class="flex space-x-6">
+    {
+      links.map((link) => (
+        <div class="font-medium md:text-lg">
+          <a href={link.href}>{link.text}</a>
+        </div>
+      ))
+    }
+    <slot />
+  </div>
+</div>
