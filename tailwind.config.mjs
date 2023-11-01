@@ -6,9 +6,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "griko": "#27292b",
-        "cultured": "#f9f9f9",
-        "flash": "#ffc24f"
+		"primary": "#abcc23",
+		"secondary": "#a3dada",
+		"trunk": "#6e7072",
+		"background": "#f6f9f5"
       },
       fontFamily: {
         sans: ["Inter", fontFamily.sans],

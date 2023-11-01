@@ -1,9 +1,15 @@
 ---
+import Marquee from "@components/Marquee.astro";
 import Layout from "../layouts/Layout.astro";
+import Section from "@components/Section.astro";
 ---
 
 <Layout title="Steve Beczkiewicz">
-  <h1>Steve Beczkiewicz</h1>
+  <Marquee
+    title="Hello There!"
+    subTitle="My name is Steve. I take photos, write code, and reach for the stars!"
+  />
+  <Section title="Current Favorites" />
   <div class="grid-standard">
     <div>01</div>
     <div>02</div>
