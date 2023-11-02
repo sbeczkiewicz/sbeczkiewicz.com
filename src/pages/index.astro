@@ -1,7 +1,13 @@
 ---
+import { getEntryBySlug } from "astro:content";
 import Marquee from "@components/Marquee.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "@components/Section.astro";
+import ImagePreview from "@components/ImagePreview.astro";
+
+const photos = await Promise.all([
+  getEntryBySlug("photos", "glacier-twilight"),
+]);
 ---
 
 <Layout title="Steve Beczkiewicz">
@@ -9,12 +15,17 @@ import Section from "@components/Section.astro";
     title="Hello There!"
     subTitle="My name is Steve. I take photos, write code, and reach for the stars!"
   />
-  <Section title="Current Favorites" />
-  <div class="grid-standard">
-    <div>01</div>
-    <div>02</div>
-    <div>03</div>
-    <div>04</div>
-    <div>05</div>
-  </div>
+  <Section title="Current Favorites" >
+    <div class="grid-standard">
+      {
+        photos.map(({ data, slug }) => (
+          <ImagePreview
+            src={data.compressed.src}
+            alt={data.alt}
+            href={`/photos/${slug}`}
+          />
+        ))
+      }
+    </div>
+  </Section>
 </Layout>

@@ -1,14 +1,14 @@
 ---
 interface Props {
   src: string;
+  alt: string;
   href?: string;
 }
-const { src, href } = Astro.props;
+const { src, alt, href } = Astro.props;
 ---
 
 <div>
-  <div>1</div>
-  <!-- <a href={href}>
-    <img src={src} />
-  </a> -->
+  <a href={href}>
+    <img src={src} alt={alt} class="w-full" />
+  </a>
 </div>
