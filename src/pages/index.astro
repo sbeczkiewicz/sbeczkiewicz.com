@@ -4,9 +4,11 @@ import Marquee from "@components/Marquee.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "@components/Section.astro";
 import ImagePreview from "@components/ImagePreview.astro";
+import "../global.css";
 
 const photos = await Promise.all([
   getEntryBySlug("photos", "glacier-twilight"),
+  getEntryBySlug("photos", "the-watcher"),
 ]);
 ---
 

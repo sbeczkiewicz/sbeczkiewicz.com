@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Section from "@components/Section.astro";
+import "../../global.css";
 
 interface Props {
   photo: CollectionEntry<"photos">;
@@ -17,13 +18,13 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout title=`${photo.data.title}`>
+<Layout title={photo.data.title}>
   <Section title={photo.data.title}>
     <div>
       <img
         src={photo.data.compressed.src}
         alt={photo.data.alt}
-        class="w-full rounded-xl"
+        class="w-full"
       />
     </div>
     <div class="my-3 md:flex md:flex-row">
