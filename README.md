@@ -1,7 +1,7 @@
 # sbeczkiewicz.com
 
-A website containing some photos i've taken and some projects i've worked on.
-Also a fun little playground to learn how to use astro
+A personal website containing some photos I've taken and some projects I've worked on.
+Also a fun little playground to learn how to use [Astro](https://astro.build).
 
 ## Powered By
 
