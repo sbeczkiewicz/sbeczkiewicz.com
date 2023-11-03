@@ -8,11 +8,20 @@ import "../global.css";
 
 const photos = await Promise.all([
   getEntryBySlug("photos", "glacier-twilight"),
+  getEntryBySlug("photos", "crater-of-stars"),
+  getEntryBySlug("photos", "copper-trails"),
+  getEntryBySlug("photos", "fishing-for-sunsets"),
+  getEntryBySlug("photos", "lady-bird-mist"),
+  getEntryBySlug("photos", "mountain-skyline"),
+  getEntryBySlug("photos", "outer-wilds"),
+  getEntryBySlug("photos", "ruby-rocks"),
+  getEntryBySlug("photos", "superior-rail-echos"),
   getEntryBySlug("photos", "the-watcher"),
+  getEntryBySlug("photos", "windy-light")
 ]);
 ---
 
-<Layout title="Steve Beczkiewicz">
+<Layout title="Steve Beczkiewicz" description="The union of photography, programming, and bad jokes.">
   <Marquee
     title="Hello There!"
     subTitle="My name is Steve. I take photos, write code, and reach for the stars!"

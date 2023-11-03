@@ -5,9 +5,9 @@ location: Mountain, WI
 date: 2023-05-04
 alt: Mountain Fire Lookout Tower
 original:
-  { src: https://i.imgur.com/M9F9WIB.jpg }
+  { src: https://sbeczkiewicz.blob.core.windows.net/images/20230504-IMG_0521.jpg }
 compressed:
   {
-    src: https://i.imgur.com/UJWuvHy.jpg,
+    src: https://sbeczkiewicz.blob.core.windows.net/compressed/20230504-IMG_0521-compressed.jpg,
   }
 ---

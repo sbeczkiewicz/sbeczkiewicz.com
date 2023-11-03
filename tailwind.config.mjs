@@ -6,10 +6,10 @@ export default {
   theme: {
     extend: {
       colors: {
-		"primary": "#abcc23",
-		"secondary": "#a3dada",
-		"trunk": "#6e7072",
-		"background": "#f6f9f5"
+        "primary": "#abcc23",
+        "secondary": "#a3dada",
+        "trunk": "#6e7072",
+        "background": "#f6f9f5"
       },
       fontFamily: {
         sans: ["Inter", fontFamily.sans],

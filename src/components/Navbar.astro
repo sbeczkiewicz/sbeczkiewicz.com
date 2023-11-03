@@ -16,7 +16,8 @@ const { links } = Astro.props;
     {
       links.map((link) => (
         <div class="font-medium md:text-lg">
-          <a href={link.href}>{link.text}</a>
+          {link.openInNewTab ? <a href={link.href} target="_blank">{link.text}</a> : <a href={link.href} >{link.text}</a>}
+          
         </div>
       ))
     }
