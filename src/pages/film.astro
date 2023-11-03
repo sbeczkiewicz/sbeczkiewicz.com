@@ -1,0 +1,30 @@
+---
+import { getEntryBySlug } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Section from "@components/Section.astro";
+import ImagePreview from "@components/ImagePreview.astro";
+import "../global.css";
+
+const photos = await Promise.all([
+  getEntryBySlug("photos", "waiting"),
+  getEntryBySlug("photos", "geraniums"),
+  getEntryBySlug("photos", "golden-river"),
+  getEntryBySlug("photos", "mansion"),
+]);
+---
+
+<Layout title="Steve on Film" description="Film is not dead.">
+  <Section title="Steve on Film">
+    <div class="grid-standard">
+      {
+        photos.map(({ data, slug }) => (
+          <ImagePreview
+            src={data.compressed.src}
+            alt={data.alt}
+            href={`/photos/${slug}`}
+          />
+        ))
+      }
+    </div>
+  </Section>
+</Layout>

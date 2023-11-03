@@ -1,27 +1,27 @@
 ---
 import { getEntryBySlug } from "astro:content";
-import Marquee from "@components/Marquee.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "@components/Section.astro";
 import ImagePreview from "@components/ImagePreview.astro";
 import "../global.css";
 
 const photos = await Promise.all([
+  getEntryBySlug("photos", "glacier-twilight"),
+  getEntryBySlug("photos", "crater-of-stars"),
+  getEntryBySlug("photos", "copper-trails"),
+  getEntryBySlug("photos", "fishing-for-sunsets"),
+  getEntryBySlug("photos", "lady-bird-mist"),
   getEntryBySlug("photos", "mountain-skyline"),
   getEntryBySlug("photos", "outer-wilds"),
-  getEntryBySlug("photos", "fishing-for-sunsets"),
   getEntryBySlug("photos", "ruby-rocks"),
-  getEntryBySlug("photos", "glacier-twilight"),
   getEntryBySlug("photos", "superior-rail-echos"),
+  getEntryBySlug("photos", "the-watcher"),
+  getEntryBySlug("photos", "windy-light")
 ]);
 ---
 
-<Layout title="Steve Beczkiewicz" description="The union of photography, programming, and bad jokes.">
-  <Marquee
-    title="Hello There!"
-    subTitle="My name is Steve. I take photos, write code, and reach for the stars!"
-  />
-  <Section title="Current Favorites" >
+<Layout title="Portfoilio - Steve Beczkiewicz" description="An aggrigation of photography for your viewing pleasure. Ranges from nature to the far beyond.">
+  <Section title="Portfolio">
     <div class="grid-standard">
       {
         photos.map(({ data, slug }) => (
