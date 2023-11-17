@@ -29,9 +29,7 @@ const currentYear = new Date().getFullYear()
           links={[
             { text: "Home", href: "/" },
             { text: "Portfolio", href: "/portfolio" },
-            { text: "Film", href: "/film" },
-            { text: "Github", href: "https://github.com/sbeczkiewicz/", openInNewTab: true },
-            { text: "LinkedIn", href: "https://www.linkedin.com/in/steve-beczkiewicz-23b731182/" , openInNewTab: true}
+            { text: "Film", href: "/film" }
           ]}
         />
       </div>
@@ -45,10 +43,15 @@ const currentYear = new Date().getFullYear()
     <footer>
       <div class="frame my-6 md:my-8">
         <hr class="mb-3 opacity-70" />
-        <div>Copyright Steve Beczkiewicz ©
+        <p>Copyright Steve Beczkiewicz ©
           {currentYear}
-        </div>
-        <div>Powered by Astro, Tailwind, Azure, and Love</div>
+        </p>
+        <p>Powered by Astro, Tailwind, Azure, and Love</p>
+        <br/>
+        <ul>
+          <li><a href="https://github.com/sbeczkiewicz/" target="_blank" class="link"> Github</a></li>
+          <li><a href="https://www.linkedin.com/in/steve-beczkiewicz-23b731182/" target="_blank" class="link">LinkedIn</a></li>
+        </ul>
       </div>
     </footer>
   </body>

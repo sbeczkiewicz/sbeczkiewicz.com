@@ -15,3 +15,7 @@
   @apply md:grid-cols-2;
   @apply gap-4;
 }
+
+.link {
+  @apply hover:underline;
+}
