@@ -43,15 +43,22 @@ const currentYear = new Date().getFullYear()
     <footer>
       <div class="frame my-6 md:my-8">
         <hr class="mb-3 opacity-70" />
-        <p>Copyright Steve Beczkiewicz ©
-          {currentYear}
-        </p>
-        <p>Powered by Astro, Tailwind, Azure, and Love</p>
-        <br/>
-        <ul>
-          <li><a href="https://github.com/sbeczkiewicz/" target="_blank" class="link"> Github</a></li>
-          <li><a href="https://www.linkedin.com/in/steve-beczkiewicz-23b731182/" target="_blank" class="link">LinkedIn</a></li>
-        </ul>
+        <div class="my-3 md:flex md:flex-row"> 
+          <div class="mr-16">
+            <p class="font-bold">Info</p>
+            <p>Copyright Steve Beczkiewicz ©
+              {currentYear}
+            </p>
+            <p>Powered by Astro, Tailwind, Azure, and Love</p>  
+          </div> 
+          <div>
+            <p class="font-bold">Links</p>
+            <ul>
+              <li><a href="https://github.com/sbeczkiewicz/" target="_blank" class="link"> Github</a></li>
+              <li><a href="https://www.linkedin.com/in/steve-beczkiewicz-23b731182/" target="_blank" class="link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
